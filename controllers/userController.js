@@ -1,4 +1,3 @@
-
 const { User } = require("../models");
 
 module.exports = {
@@ -22,12 +21,14 @@ module.exports = {
   },
   getAllUsers: async (req, res) => {
     try {
-      const users = await User.findAll();
-      res.json(users);
+      const usersData = await User.findAll();
+      const users = usersData.map((user) => user.get({ plain: true }));
+      res.render("allUsers", {
+        users,
+        testData: "i hit this handlebar",
+      });
     } catch (e) {
       res.json(e);
     }
   },
 };
-
-
