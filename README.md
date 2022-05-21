@@ -28,7 +28,7 @@ This is a CMS-style blog where users can publish tech articles and comment on ot
   
 ## Usage
 
-[Click here to view the live site deployed to Heroku]()
+[Click here to view the live site deployed to Heroku](https://my-tech-blogjs22.herokuapp.com/)
 
 
 
